@@ -24,5 +24,67 @@ Desenvolver as funcionalidades conforme requisitos
 - [CT005] Cadastre, altere e exclua um pedido.
 
 ## Tecnologias
+- Node.js (Framework)
+- VsCode (IDE)
+- Insomnia (IDE de testes)
+- Prisma (ORM)
+- XAMPP (IDE) SGBD MySQL
 
 ## Passo a Passo de como executar a API
+- 1 Clone este repositório
+- 2 Abrir com Vscode
+- 3 Criar o arquivo **.env** na pasta API contendo:
+```js
+DATABASE_URL="mysql://root@localhost:3306/petshodelivery?schema=public&timezone=UTC"
+PORT=3001
+```
+- Obs: certifique-se de não ter um banco de dados chamado **petshopdelivery** no seu MySQL.
+- 4 Abrir o XAMPP e dar start em MySQL
+- 5 No VsCode abra um terminal **CTRL + '** cmd ou bash e digite os seguintes comandos para baixar as dependências e instalar o Banco de dados
+```bash
+cd api
+npm install
+npm i prisma -g
+npx prisma migrate dev --name init
+npx nodemon
+# ou
+npm start
+```
+- 6 Caso seja necessário remover o banco de dados para testar a criação novamente
+    - Exclua a pasta migrations
+```bash
+prisma migrate reset
+```
+
+- 7 Abra o Insomnia e importe o arquivo **./docs/insomnia.yaml** para realizar os testes.
+
+## Prints dos testes
+- Motorista (read)
+![Print01](./docs/prints/read-Motoristas.png)
+
+- Motoristas (readOne)
+![Print02](./docs/prints/readOne-Motoristas.png)
+
+- Motorista (create)
+![Print03](./docs/prints/create-Motoristas.png)
+
+- Motorista (update)
+![Print04](./docs/prints/update-Motoristas.png)
+
+- Motorista (delete)
+![Print05](./docs/prints/delete-Motoristas.png)
+
+- Pedido (read)
+![Print06](./docs/prints/read-Pedidos.png)
+
+- Pedido (readOne)
+![Print07](./docs/prints/readOne-Pedidos.png)
+
+- Pedido (create)
+![Print08](./docs/prints/create-Pedidos.png)
+
+- Pedido (update)
+![Print09](./docs/prints/update-Pedidos.png)
+
+- Pedido (update)
+![Print010](./docs/prints/delete-Pedidos.png)
