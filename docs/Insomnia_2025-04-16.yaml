@@ -1,0 +1,323 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1741693615167
+  modified: 1741693615167
+collection:
+  - name: Pet Shop
+    meta:
+      id: fld_859aae91b80f4e8aa49eb45cad930222
+      created: 1742910504095
+      modified: 1742911712297
+      sortKey: -1742910504095
+    children:
+      - name: Motoristas
+        meta:
+          id: fld_a22de36c06364f79b6b073943416d9f0
+          created: 1742911693857
+          modified: 1744802099732
+          sortKey: -1742927480711
+        children:
+          - url: http://localhost:3001/motoristas
+            name: read
+            meta:
+              id: req_8d9f9e40801442bcb21cf96ceefb33f2
+              created: 1742911685189
+              modified: 1744802610552
+              isPrivate: false
+              sortKey: -1742921034637
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/motoristas
+            name: create
+            meta:
+              id: req_28e7eb3e62cc46498725755cd576f062
+              created: 1742921031359
+              modified: 1744802934315
+              isPrivate: false
+              sortKey: -1742921034400.25
+            method: POST
+            body:
+              mimeType: application/json
+              text: |
+                {
+                	"email": "lucas.rocha@uol.com.br",
+                	"nome": "Lucas Rocha",
+                	"telefone": "61 98321 9090"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.0.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/motoristas/6
+            name: update
+            meta:
+              id: req_145b80df4e664eabb65086adf6bd3522
+              created: 1742921033243
+              modified: 1744802969789
+              isPrivate: false
+              sortKey: -1742921034213.5
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |
+                {
+                	"email": "lucas.rocha@uol.com.br",
+                	"nome": "Lucas Rocha",
+                	"telefone": "0000000"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.0.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/motoristas/6
+            name: delete
+            meta:
+              id: req_53e1f2a5679d4601a92bb2231bbc26da
+              created: 1742921034537
+              modified: 1744802982035
+              isPrivate: false
+              sortKey: -1742921033790
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/motoristas/1
+            name: readOne
+            meta:
+              id: req_f8c95e381784400787464fcb8825c60b
+              created: 1744802008146
+              modified: 1744804357060
+              isPrivate: false
+              sortKey: -1742921034587
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Pedido
+        meta:
+          id: fld_bb3261c8bf9048b48f4700fba3b530b5
+          created: 1742927480611
+          modified: 1742927480611
+          sortKey: -1742927480611
+        children:
+          - url: http://localhost:3001/pedidos/7
+            name: delete
+            meta:
+              id: req_47e0518f0afa47609722c66919a76758
+              created: 1742927629500
+              modified: 1744804339798
+              isPrivate: false
+              sortKey: -1742927629500
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/pedidos/7
+            name: update
+            meta:
+              id: req_41f71f492584472a871c48b1686203b7
+              created: 1742927647359
+              modified: 1744804321422
+              isPrivate: false
+              sortKey: -1742927647359
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                		"motorista_id": 1,
+                		"data": "2025-04-16T11:51:12.718Z",
+                		"produto": "Petisco Dental para Cães 200g",
+                		"valor": "22",
+                		"endereco": "Rua Pet Fit, 321",
+                		"numero": "321",
+                		"cep": "13579-246",
+                		"complemento": "000000 01"
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.0.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/pedidos
+            name: create
+            meta:
+              id: req_23fba6e48aad4fdc8e0adc4ba524d124
+              created: 1742927648463
+              modified: 1744804467833
+              isPrivate: false
+              sortKey: -1742927648463
+            method: POST
+            body:
+              mimeType: application/json
+              text: |
+                {
+                  "motorista_id": 1,
+                  "produto": "Perfume de Cães",
+                  "valor": 22.00,
+                  "endereco": "Rua Pet Fit, 321",
+                  "numero": "321",
+                  "cep": "13579-246",
+                  "complemento": "Loja 01"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.0.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/pedidos
+            name: read
+            meta:
+              id: req_4a24bcdb3eba4f198af30545ecae4637
+              created: 1742927649530
+              modified: 1744804231191
+              isPrivate: false
+              sortKey: -1742927649530
+            method: GET
+            body:
+              mimeType: application/json
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.0.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/pedidos/3
+            name: readOne
+            meta:
+              id: req_6ce545f1f3864b7a886702ad3577cb54
+              created: 1744802048898
+              modified: 1744804332647
+              isPrivate: false
+              sortKey: -1742927648996.5
+            method: GET
+            body:
+              mimeType: application/json
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.0.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - url: http://localhost:3001
+        name: Título
+        meta:
+          id: req_adda56162e924eb0bd2d46b18fa9c163
+          created: 1742910507557
+          modified: 1744802621562
+          isPrivate: false
+          sortKey: -1742910507557
+        method: GET
+        parameters:
+          - id: pair_070c4820505a4b3b958f68c5a87caee3
+            disabled: false
+          - id: pair_43c730b7fc7c489e96c021e17bfee67e
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/10.3.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1742910494993
+    modified: 1742910494993
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1742910494988
+    modified: 1742910494988
+    isPrivate: false
