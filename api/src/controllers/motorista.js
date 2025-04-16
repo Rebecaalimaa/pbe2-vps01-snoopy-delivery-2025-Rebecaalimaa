@@ -18,17 +18,17 @@ const read = async (req, res) => {
 }
 
 const readOne = async (req, res) => {
-    try {
-        const motorista = await prisma.motorista.findUnique({
-            where: {
-                motorista_id: Number(req.params.id)
-            }
-        });
-        return res.json(motorista);
-    } catch (error) {
-        return res.status(400).json({ error: error.message });
-    }
+    const motorista = await prisma.motorista.findFirst({
+        where: {
+            motorista_id: Number(req.params.id)
+        },
+        include: {
+            pedidos: true
+        }
+    });
+    res.json(motorista);
 }
+
 
 const update = async (req, res) => {
     try {
